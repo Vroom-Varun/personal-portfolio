@@ -1,0 +1,45 @@
+#root {
+  margin: 0 auto;
+}
+
+.intro { 
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 65dvh;
+  transform: translateX(50%);
+}
+
+.intro h1{
+  color: #ced8f8;
+  margin: 0;
+  font-size: 3.0em;
+  margin-bottom: -2rem;
+}
+
+.p_intro{
+  color: #4cc7ad;
+  margin: 0;
+  margin-bottom: 0rem;
+}
+
+.about-me-text{
+  color: #ced8f8;
+  width: auto;
+}
+.exp_wrapper{
+  margin-top: 5dvh;
+  padding: 0;
+  width: 50%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translateX(50%);
+}
