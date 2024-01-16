@@ -26,7 +26,7 @@ function Nav() {
     // Create a link element
     const link = document.createElement('a');
     // Set the href attribute to the file path
-    link.href = `src/assets/varun-sreepathy-CV.pdf`;
+    link.href = `/assets/img/varun-sreepathy-CV.pdf`;
     // Set the download attribute with the file name
     link.download = resumeFile;
 
