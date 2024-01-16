@@ -4,14 +4,20 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import AdbIcon from "@mui/icons-material/Adb";
 import DoneAllSharpIcon from '@mui/icons-material/DoneAllSharp';
 const pages = ["Me.", "Past Work."];
-
 function Nav() {
   const scrollToElement = (page) => {
     const targetElement = document.getElementById(page);
-    targetElement.scrollIntoView({ behavior: "smooth" });
+    console.log(page);
+    if(page === "Me."){
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }else{
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const downloadResume = () => {
@@ -19,10 +25,8 @@ function Nav() {
 
     // Create a link element
     const link = document.createElement('a');
-
     // Set the href attribute to the file path
-    link.href = `../assets/${resumeFile}`;
-
+    link.href = `./docs/varun-sreepathy-CV.pdf`;
     // Set the download attribute with the file name
     link.download = resumeFile;
 
@@ -38,7 +42,7 @@ function Nav() {
 
   return (
     <AppBar
-      sx={{ boxShadow: "none", backgroundColor: "#0b192f" }}
+      sx={{ boxShadow: "none", backgroundColor: "#0d1b2a" }}
       position="sticky"
     >
       <Container maxWidth="false">
@@ -54,7 +58,7 @@ function Nav() {
             {pages.map((page, i) => (
               <Button
                 key={page}
-                sx={{ my: 2, color: "#4cc7ad", display: "block" }}
+                sx={{ my: 2, color: "#e0e1dd", display: "block" }}
                 onClick={() => scrollToElement(page)}
               >
                 <span key={i} style={{ color: '#cdd8f8'}}>{i + 1}. </span>
@@ -62,7 +66,7 @@ function Nav() {
               </Button>
             ))}
             <Button
-              sx={{ my: 2, color: "#4cc7ad", display: "block" }}
+              sx={{ my: 2, color: "#e0e1dd", display: "block" }}
               variant="outlined"
               onClick={() => downloadResume()}
             >

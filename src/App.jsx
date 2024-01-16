@@ -19,7 +19,7 @@ function App() {
   return (
     <>
     <Nav/>
-    <div id="Me." className='intro'>
+    <div className='intro'>
       <p className='p_intro'>Hi, my name is</p>
       <h1>Varun Sreepathy</h1>
       <TypeAnimation
@@ -31,7 +31,8 @@ function App() {
           fontSize: "2em",
           opacity: "90%",
           marginTop: "1rem",
-          color: "#8892af"
+          color: "#8892af",
+          whiteSpace: "nowrap"
         }}
       />
       I{"'"}m a software engineer specializing in building scalable applications. 
